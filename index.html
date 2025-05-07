@@ -21,8 +21,8 @@
     </div>
 
     <header>
-        <a href= "#" class="logo">
-            <img src="new srijan.png" alt="Project Srijan Logo">
+        <a href="#" class="logo">
+            <img src="new srijan.png" alt="Project Srijan Logo" />
             <h1></h1>
         </a>
         <nav>
@@ -41,6 +41,7 @@
             </div>
         </nav>
     </header>
+    
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -263,12 +264,23 @@
 <!-- Add JS before closing body tag -->
 <script>
 
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');  // Select all the navigation links
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+// Close the menu when a nav item is clicked
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('active');  // Close the menu
+    hamburger.classList.remove('active');  // Change hamburger icon back to normal
   });
+});
+
 
     const counters = document.querySelectorAll('.counter');
   
