@@ -24,7 +24,7 @@
         <a href= "#" class="logo">
             <img src="new srijan.png" alt="Project Srijan Logo">
             <h1></h1>
-        </div>
+        </a>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
@@ -262,6 +262,14 @@
 
 <!-- Add JS before closing body tag -->
 <script>
+
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
     const counters = document.querySelectorAll('.counter');
   
     const animateCounter = (counter) => {
