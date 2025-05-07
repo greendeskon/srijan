@@ -44,6 +44,11 @@ body {
     opacity: 0.2;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
+
 .shape1 {
     width: 500px;
     height: 500px;
